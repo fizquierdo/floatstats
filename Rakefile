@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "floatstats"
   gem.homepage = "http://github.com/fizquierdo/floatstats"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{stats for arrays of fp numbers}
+  gem.description = %Q{stats for fp arrays: stddev, average, etc}
   gem.email = "fer.izquierdo@gmail.com"
   gem.authors = ["Fernando Izquierdo-Carrasco"]
   # dependencies defined in Gemfile
