@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "TODO",
     "VERSION",
+    "floatstats.gemspec",
     "lib/floatstats.rb",
     "test/helper.rb",
     "test/test_floatstats.rb"
