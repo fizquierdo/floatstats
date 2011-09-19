@@ -25,10 +25,6 @@ module Enumerable
   def sample_variance
     self.diffavg.sum_of_squares / self.length.to_f
   end
-
-  def sample_variance
-    self.diffavg.sum_of_squares / self.length.to_f
-  end
   def standard_deviation
     Math.sqrt(self.sample_variance)
   end
