@@ -28,6 +28,30 @@ module Enumerable
   def standard_deviation
     Math.sqrt(self.sample_variance)
   end
+  def median
+    n = (self.length - 1) / 2
+    n2 = (self.length) / 2
+    if self.length % 2 == 0 # even case
+      (self[n] + self[n2]) / 2
+    else
+      self[n]
+    end
+  end
+  def mad # median absolute deviation
+    med = self.median
+    deviation_set = (self.map{|n| (n-med).abs }).sort.delete_if{|x| x == 0.0 }
+    1.4826 * deviation_set.median # scale for consistency with std dev
+  end
+  def rank
+    ranked = []
+    order = (0...self.size).to_a
+    self.zip(order).sort{|a,b| b[0]<=>a[0]}.each_with_index do |elem, i|
+      ranked[elem[1]] = i + 1 
+    end
+    ranked
+  end
+
+
   # operations with 2 enumerable vectors
   def self.product(x,y)
     x.zip(y).map{|i,j| i*j}
